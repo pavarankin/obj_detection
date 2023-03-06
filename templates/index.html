@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Главная</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h1>Главная</h1>
+  <div class="container">
+     <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+           <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Результат обработки</h4>
+           </div>
+           <div class="card-body">
+              <ul class="list-unstyled mt-3 mb-4">
+		<img src="{{ last_image }}" alt="Результат распознавания" height="600">
+              </ul>
+              <a href="/upload" class="btn btn-lg btn-block btn-outline-primary">Добавить изображение</a>
+           </div>
+       </div>
+   </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Добавление изображения</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Загрузка изображения</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file_img">
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}
