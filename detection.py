@@ -78,6 +78,12 @@ def upload_file(type_object=None):
 
     return render_template('create.html')
 
+@app.route('/yolo_post', methods=['POST'])
+def recv_message():
+    content = request.get_json()
+    print(content)
+    return content
+
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
