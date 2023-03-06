@@ -1,8 +1,9 @@
 # obj_detection
 
-curl --header "Content-Type: application/json" --request POST --data '{"object":"car", "img":"urfu.ru"}' http://127.0.0.1:5000/json
+test json: 
+	curl --header "Content-Type: application/json" --request POST --data '{"object":"car", "img":"urfu.ru"}' http://127.0.0.1:5000/json
 
-http://10.74.192.13/cat.jpg
-http://10.74.192.13/street.png
-http://10.74.192.13/sc.jpg
-http://127.0.0.1:5000/static/9.jpg
+images:
+	http://10.74.192.13/cat.jpg
+	http://10.74.192.13/street.png
+	http://10.74.192.13/sc.jpg
