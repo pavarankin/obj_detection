@@ -19,7 +19,7 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 @app.route('/')
 def index():
     full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'last.jpg')
-    return render_template('index.html', last_image = full_filename)
+    return render_template('index.html', last_image = full_filename, count = 0)
 
 @app.route('/about')
 def about():
@@ -67,7 +67,7 @@ def upload_file(type_object=None):
 
         if type_object:
             result_path = '../' + result_path
-        return render_template('index.html', last_image = result_path)
+        return render_template('index.html', last_image = result_path, count = count_object)
 
     return render_template('create.html')
 
