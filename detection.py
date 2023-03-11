@@ -75,12 +75,16 @@ def upload_file(type_object=None):
 def recv_message():
     content = request.get_json()
     filename = content['img'].rsplit('/', 1)[1].lower()
-    type_object = content['object']
+    #type_object = content['object']
+    type_object = content['ctg']
     NEED_CLASS = check_class_category(type_object)
 
+    print(content)
     url = content['img']
+    print(url)
 
     r = requests.get(url)
+    print(r)
 
     path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     result_path = os.path.join(app.config['UPLOAD_FOLDER'], 'out-' + filename)
